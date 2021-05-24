@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="audioDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-kG-VnG">
+                                <rect key="frame" x="20" y="124" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-9B-def">
+                                <rect key="frame" x="342" y="123" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="deK-24-Jdw">
+                                <rect key="frame" x="18" y="200" width="378" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otm-C8-VeX">
+                                <rect key="frame" x="20" y="287" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="seekBackWards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aN-gz-3wV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r15-Ur-wVP">
+                                <rect key="frame" x="342" y="287" width="52" height="30"/>
+                                <state key="normal" title="farward"/>
+                                <connections>
+                                    <action selector="seekForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K99-VW-Vph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-uD-LCB">
+                                <rect key="frame" x="177" y="287" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="l1M-0P-fWK"/>
+                                    <constraint firstAttribute="width" constant="60" id="xCD-si-7OJ"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlP-I4-aYQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hiP-9B-def" secondAttribute="trailing" constant="30" id="2XL-gL-MUs"/>
+                            <constraint firstItem="r15-Ur-wVP" firstAttribute="top" secondItem="deK-24-Jdw" secondAttribute="bottom" constant="57" id="3Sb-vb-vxY"/>
+                            <constraint firstItem="otm-C8-VeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GLM-EQ-56W"/>
+                            <constraint firstItem="hiP-9B-def" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="ITh-dK-l9J"/>
+                            <constraint firstItem="deK-24-Jdw" firstAttribute="top" secondItem="dwP-kG-VnG" secondAttribute="bottom" constant="55" id="JRd-HG-te4"/>
+                            <constraint firstItem="0jj-uD-LCB" firstAttribute="top" secondItem="deK-24-Jdw" secondAttribute="bottom" constant="57" id="MPh-5B-nwj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r15-Ur-wVP" secondAttribute="trailing" constant="20" id="NQG-C8-b0y"/>
+                            <constraint firstItem="deK-24-Jdw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pa6-mX-08k"/>
+                            <constraint firstItem="hiP-9B-def" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dwP-kG-VnG" secondAttribute="trailing" constant="8" symbolic="YES" id="cty-xg-V50"/>
+                            <constraint firstItem="dwP-kG-VnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kVg-wY-2ia"/>
+                            <constraint firstItem="0jj-uD-LCB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="knq-nJ-O9E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deK-24-Jdw" secondAttribute="trailing" constant="20" id="oyf-Xk-ISi"/>
+                            <constraint firstItem="dwP-kG-VnG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="y3u-Ew-dTv"/>
+                            <constraint firstItem="otm-C8-VeX" firstAttribute="top" secondItem="deK-24-Jdw" secondAttribute="bottom" constant="57" id="yIl-Oj-KmN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonPlay" destination="0jj-uD-LCB" id="vSD-U1-bRg"/>
+                        <outlet property="labelCurrentTime" destination="hiP-9B-def" id="n1s-f0-G0N"/>
+                        <outlet property="labelOverallDuration" destination="dwP-kG-VnG" id="Ryh-j4-ItD"/>
+                        <outlet property="playbackSlider" destination="deK-24-Jdw" id="YpL-Oe-HbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214.49275362318843" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
